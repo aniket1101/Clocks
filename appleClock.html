@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clocks</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <script src="https://use.fontawesome.com/37a71263e1.js"></script>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+<section class="header">
+    <nav>
+        <div class="nav-links" id="navLinks">
+            <i class="fa fa-times" onclick="hideMenu()"></i>
+            <ul>
+                <li class="list active"><a href="index.html">Home (Classic Digital)</a></li>
+                <li class="list"><a href="appleClock.html">Apple Watch</a></li>
+                <!-- <li class="list"><a href="#">Apple Watch</a></li>
+                <li class="list"><a href="#">Apple Watch</a></li>
+                <li class="list"><a href="#">Apple Watch</a></li>
+                <li class="list"><a href="#">Apple Watch</a></li> -->
+            </ul>
+        </div>
+        <i class="fa fa-bars" onclick="showMenu()"></i>
+    </nav>
+
+</section>
+
+<section>
+  <div class="fill">
+    <div class="reference"></div>
+    <div class="appleClock" id="utility-appleClock">
+      <div class="centre">
+        <div class="dynamic"></div>
+        <div class="expand round circle-1"></div>
+        <div class="anchor hour">
+          <div class="element thin-hand"></div>
+          <div class="element fat-hand"></div>
+        </div>
+        <div class="anchor minute">
+          <div class="element thin-hand"></div>
+          <div class="element fat-hand minute-hand"></div>
+        </div>
+        <div class="anchor second">
+          <div class="element second-hand"></div>
+        </div>
+        <div class="expand round circle-2"></div>
+        <div class="expand round circle-3"></div>
+      </div>
+    </div>
+  </div>
+
+  <div style="-moz-user-select: none; -webkit-user-select: none; -ms-user-select:none; user-select:none;-o-user-select:none;" class="classicDigitalContainer" id="classicDigitalContainer">
+  </div>
+
+</section>
+
+
+<!----------JS for  menu--------->
+<script>
+  // Added active class to selected list menu
+  let list = document.querySelectorAll('.list');
+  for (let i=0; i<list.length; i++){
+      list[i].onclick = function(){
+          let j = 0;
+          while (j < list.length){
+              list[j++].className = 'list';
+          }
+          list[i].className = 'list active';
+      }
+  }
+
+  // Toggle menu
+  var navLinks = document.getElementById("navLinks");
+  function showMenu(){
+      navLinks.style.right = "0";
+  }
+  function hideMenu(){
+      navLinks.style.right = "-200px";
+  }
+</script>
+
+</body>
+</html>

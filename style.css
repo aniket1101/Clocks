@@ -1,0 +1,277 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    margin: 0%;
+    padding: 0%;
+    background-color: black;
+}
+
+Navigation
+nav{
+    display: flex;
+    padding: 2% 6%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-links{
+    flex: 1;
+    text-align: right;
+}
+
+.nav-links ul li{
+    list-style: none;
+    display: inline-block;
+    padding: 8px 12px;
+    position: relative;
+}
+
+.nav-links ul li a{
+    color: #fff;
+    text-decoration: none;
+    font-size: 13px;
+}
+
+.nav-links ul li::after{
+    content: '';
+    width: 0%;
+    height: 2px;
+    background: #fff;
+    display: block;
+    margin: auto;
+    transition: 0.5s;
+}
+
+.nav-links ul li:hover::after{
+    width: 100%;
+}
+
+nav .fa{
+    display: none;
+}
+
+
+/* Classic Digital */
+.classicDigitalContainer{
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    font-weight: bold;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 66px;
+    width: vw;
+}
+
+/* Apple Watch */
+
+.fill {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+
+a {
+    display: block;
+    position: relative;
+    top: 0px; left: 0px;
+    color: #fcc;
+    text-decoration: none;
+    padding: 4px;
+    font: 12px Verdana, sans-serif;
+    z-index: 1;
+}
+
+.appleClock {
+    position: absolute;
+    opacity: 1;
+}
+
+.fill .appleClock {
+    left: 50%;
+    top: 50%;
+}
+
+.centre {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+}
+
+.expand {
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translate(-50%, -50%);
+}
+
+.anchor {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 0;
+}
+
+.element {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.round {
+    border-radius: 296px;
+}
+
+.circle-1 {
+    background: white;
+    width: 12px;
+    height: 12px;
+}
+
+.circle-2 {
+    background: #FA9F22;
+    width: 8px;
+    height: 8px;
+}
+
+.circle-3 {
+    background: black;
+    width: 4px;
+    height: 4px;
+}
+
+.second {
+    transform: rotate(180deg);
+}
+
+.minute {
+    transform: rotate(54deg);
+}
+
+.second-hand {
+    width: 2px;
+    height: 164px;
+    background: #FA9F22;
+    transform: translate(-50%,-100%) translateY(24px);
+}
+
+.hour {
+    transform: rotate(304.5deg);
+}
+
+.thin-hand {
+    width: 4px;
+    height: 50px;
+    background: white;
+    transform: translate(-50%,-100%);
+}
+
+.fat-hand {
+    width: 10px;
+    height: 57px;
+    border-radius: 10px;
+    background: white;
+    transform: translate(-50%,-100%) translateY(-18px);
+}
+
+.minute-hand {
+    height: 112px;
+}
+
+.hour-text {
+    position: absolute;
+    font: 40px Hei, Helvetica, Arial, sans-serif;
+    color: white;
+    transform: translate(-50%,-50%);
+}
+
+.hour-10 {
+    padding-left: 0.4ex;
+}
+.hour-11 {
+    padding-left: 0.25ex;
+}
+
+.minute-text {
+    position: absolute;
+    font: 12px Avenir Next, Helvetica, Arial, sans-serif;
+    color: white;
+    transform: translate(-50%,-50%);
+}
+
+.minute-line {
+    background: white;
+    width: 1px;
+    height: 9px;
+    transform: translate(-50%,-100%) translateY(-131px);
+    opacity: 0.34;
+}
+
+/* Mobile */
+@media(max-width: 700px){
+    .nav-links ul li{
+        display: block;
+        border-top-right-radius: 20px;
+        border-bottom-right-radius: 20px;
+        width: 100%;
+    }
+
+    .nav-links ul li:hover::after{
+        width: 0%;
+    }
+
+    .nav-links ul li.active{
+        background: #fff;
+    }
+
+    .nav-links ul li.active a {
+        color: #3f3f3f;
+    }
+
+    .nav-links{
+        position: absolute;
+        border-top-left-radius: 10px;
+        border-bottom-left-radius: 10px;
+        background: #3f3f3f;
+        height: 100vh;
+        width: 200px;
+        top: 0;
+        right: -200px;
+        text-align: right;
+        z-index: 2;
+        transition: 1s;
+    }
+    nav .fa{
+        display: block;
+        color: white;
+        background-color: transparent;
+        margin: 10px;
+        font-size: 22px;
+        cursor: pointer;
+    }
+
+    .nav-links ul{
+        padding-right: 30px;
+    }
+    .classicDigitalContainer{
+        font-family: Arial, Helvetica, sans-serif;
+        color: white;
+        font-weight: bold;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 36px;
+    }
+
+}
